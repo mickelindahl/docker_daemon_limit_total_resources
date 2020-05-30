@@ -1,0 +1,11 @@
+[Unit]
+Description=Slice that limits docker resources
+Before=slices.target
+
+[Slice]
+CPUAccounting=true
+CPUQuota={CPU}
+
+MemoryAccounting=true
+MemoryLimit={MEM}
+
